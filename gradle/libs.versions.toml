@@ -1,0 +1,34 @@
+[versions]
+# Define the versions for your dependencies
+junit = "5.8.2"
+springBoot = "3.2.0"
+lombok = "1.18.26"
+mongoDBDriverSync = "4.4.3"
+spring-ai = "1.0.0-M1"
+
+jsonWebtoken = "0.11.5"
+feignClient = "3.0.0-M6"
+
+[libraries]
+# Define your dependencies with version references
+junit = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junitEngine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+springBootStarter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springBoot" }
+springBootStarterWeb = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springBoot" }
+springBootStarterTest = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springBoot" }
+springBootStarterMongo = { module = "org.springframework.boot:spring-boot-starter-data-mongodb", version.ref = "springBoot" }
+mongoDBDriverSync = { module = "org.mongodb:mongodb-driver-sync", version.ref = "mongoDBDriverSync" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+openAI = { module = "org.springframework.ai:spring-ai-openai", version.ref = "spring-ai" }
+springSecurity = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "springBoot" }
+springctuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "springBoot" }
+springAOP = { module = "org.springframework.boot:spring-boot-starter-aop", version.ref = "springBoot" }
+
+
+jsonwebtoken-api = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jsonWebtoken" }
+jsonwebtoken-impl = { module = "io.jsonwebtoken:jjwt-impl", version.ref = "jsonWebtoken" }
+jsonwebtoken-jackson = { module = "io.jsonwebtoken:jjwt-jackson", version.ref = "jsonWebtoken" }
+feignClient = { module = "org.springframework.cloud:spring-cloud-starter-openfeign", version.ref = "feignClient" }
+
+#log4j
+log4j = { module = "org.springframework.boot:spring-boot-starter-logging", version.ref = "springBoot" }

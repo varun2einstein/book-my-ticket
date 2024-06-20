@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.booking.ticket'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation libs.junit
+    testImplementation libs.junitEngine
+
+    implementation libs.springBootStarterMongo
+    implementation libs.mongoDBDriverSync
+    testImplementation libs.springBootStarterTest
+
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+}
+
+test {
+    useJUnitPlatform()
+}

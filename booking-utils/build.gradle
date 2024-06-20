@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.booking.ticket'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation project(":booking-model")
+    implementation project(":booking-dao")
+
+    implementation libs.springBootStarter
+    implementation libs.springAOP
+    implementation libs.lombok
+    implementation libs.springBootStarterWeb
+}
+
+test {
+    useJUnitPlatform()
+}

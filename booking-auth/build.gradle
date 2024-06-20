@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.booking.ticket'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation libs.junit
+    testImplementation libs.junitEngine
+
+    implementation libs.springBootStarterWeb
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+    implementation libs.springSecurity
+    implementation libs.springctuator
+    implementation libs.springAOP
+    implementation libs.jsonwebtoken.api
+    implementation libs.jsonwebtoken.impl
+    implementation libs.jsonwebtoken.jackson
+
+
+    implementation project(":booking-service")
+    implementation project(":booking-model")
+    implementation project(":booking-utils")
+}
+
+test {
+    useJUnitPlatform()
+}

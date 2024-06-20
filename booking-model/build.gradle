@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.booking.ticket'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Lombok dependency
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+}
+
+test {
+    useJUnitPlatform()
+}

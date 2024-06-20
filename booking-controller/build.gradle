@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.booking.ticket'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url = uri("https://repo.spring.io/milestone") }
+}
+
+dependencies {
+    testImplementation libs.junitEngine
+    testImplementation libs.junit
+
+    implementation project(":booking-service")
+    implementation project(":booking-model")
+    implementation project(":booking-utils")
+    implementation project(":booking-auth")
+    implementation project(":booking-dao")
+    implementation libs.springBootStarterWeb
+    implementation libs.springctuator
+    implementation libs.feignClient
+    implementation libs.springSecurity
+    implementation libs.springBootStarterMongo
+    implementation libs.log4j
+}
+
+test {
+    useJUnitPlatform()
+}

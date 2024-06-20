@@ -1,0 +1,9 @@
+rootProject.name = 'book-my-ticket'
+include 'booking-model'
+include 'booking-service'
+include 'booking-dao'
+include 'booking-utils'
+include 'chatBot-AI'
+include 'booking-auth'
+include 'booking-controller'
+
