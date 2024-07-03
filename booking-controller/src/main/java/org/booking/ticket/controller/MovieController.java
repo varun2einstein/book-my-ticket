@@ -30,11 +30,10 @@ public class MovieController {
 
     @GetMapping
     public ResponseEntity<List<Movie>> getAllMovies(
-            @RequestParam Optional<String> city,
             @RequestParam Optional<String> language,
             @RequestParam Optional<String> genre) {
 
-        List<Movie> movies = movieService.findMovies(city, language, genre);
+        List<Movie> movies = movieService.findMovies(language, genre);
         return ResponseEntity.ok(movies);
     }
 

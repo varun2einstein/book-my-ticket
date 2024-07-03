@@ -1,25 +1,20 @@
 package org.booking.ticket.dao.model;
 
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "theatres")
+@Table(name = "theatre")
 public class TheatreEntity extends BaseEntity{
     private String name;
     private int capacity;
     private B2BCustomerEntity b2bCustomer;
-    @Field("contactInfo")
     private ContactInfo contactInfo;
-    @Field("screens")
     private List<ScreenEntity> screens;
 
     @Data

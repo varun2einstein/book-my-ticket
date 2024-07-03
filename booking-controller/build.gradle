@@ -20,11 +20,14 @@ dependencies {
     implementation project(":booking-auth")
     implementation project(":booking-dao")
     implementation libs.springBootStarterWeb
+    implementation libs.springJPA
+    implementation libs.springBootStarterTest
     implementation libs.springctuator
     implementation libs.feignClient
     implementation libs.springSecurity
-    implementation libs.springBootStarterMongo
     implementation libs.log4j
+    implementation libs.embeddedPostgres
+    implementation libs.postgresContainer
 }
 
 test {

@@ -13,9 +13,8 @@ dependencies {
     testImplementation libs.junit
     testImplementation libs.junitEngine
 
-    implementation libs.springBootStarterMongo
     implementation libs.springBootStarterWeb
-
+    implementation libs.springJPA
     implementation project(":booking-model")
     implementation project(":booking-dao")
     implementation project(":booking-utils")

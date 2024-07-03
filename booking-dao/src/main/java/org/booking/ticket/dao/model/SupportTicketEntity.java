@@ -1,18 +1,15 @@
 package org.booking.ticket.dao.model;
 
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.index.Indexed;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "support_tickets")
+@Table(name = "support_ticket")
 public class SupportTicketEntity extends BaseEntity{
-    @Indexed
     private CustomerEntity customer;
     private String issueType;
     private String priority;

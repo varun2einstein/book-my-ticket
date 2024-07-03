@@ -1,18 +1,15 @@
 package org.booking.ticket.dao.model;
 
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.index.Indexed;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "payments")
+@Table(name = "payment")
 public class PaymentEntity extends BaseEntity{
-    @Indexed
     private TicketEntity ticket;
     private double amount;
     private String paymentMethod;

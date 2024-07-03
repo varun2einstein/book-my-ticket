@@ -15,5 +15,5 @@ public interface MovieService {
 
     void deleteMovie(String movieId);
 
-    List<Movie> findMovies(Optional<String> city, Optional<String> language, Optional<String> genre);
+    List<Movie> findMovies(Optional<String> language, Optional<String> genre);
 }

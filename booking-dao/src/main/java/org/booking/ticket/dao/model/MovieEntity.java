@@ -1,15 +1,14 @@
 package org.booking.ticket.dao.model;
 
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "movies")
+@Table(name = "movie")
 public class MovieEntity extends BaseEntity{
     private String title;
     private String description;

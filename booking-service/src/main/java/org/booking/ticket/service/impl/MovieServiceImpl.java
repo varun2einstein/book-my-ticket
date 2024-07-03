@@ -43,7 +43,7 @@ public class MovieServiceImpl implements org.booking.ticket.service.MovieService
     }
 
     @Override
-    public List<Movie> findMovies(Optional<String> city, Optional<String> language, Optional<String> genre) {
-        return movieRepository.findMovies(city.orElse(null), language.orElse(null), genre.orElse(null)).stream().map(MovieMapper::toDomain).toList();
+    public List<Movie> findMovies(Optional<String> language, Optional<String> genre) {
+        return movieRepository.findMovies(language.orElse(null), genre.orElse(null)).stream().map(MovieMapper::toDomain).toList();
     }
 }

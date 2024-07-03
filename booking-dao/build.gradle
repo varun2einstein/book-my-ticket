@@ -13,8 +13,8 @@ dependencies {
     testImplementation libs.junit
     testImplementation libs.junitEngine
 
-    implementation libs.springBootStarterMongo
-    implementation libs.mongoDBDriverSync
+    implementation libs.springJPA
+    runtimeOnly libs.postgres
     testImplementation libs.springBootStarterTest
 
     compileOnly libs.lombok

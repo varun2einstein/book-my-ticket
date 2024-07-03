@@ -1,14 +1,14 @@
 package org.booking.ticket.dao.model;
 
+import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "b2c_customers")
+@Table(name = "b2c_customer")
 public class B2CCustomerEntity extends CustomerEntity {
     private String firstName;
     private String lastName;
